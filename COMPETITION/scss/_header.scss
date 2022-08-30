@@ -1,0 +1,66 @@
+header {
+    background: url('https://acegif.com/wp-content/gifs/water-20.gif');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $text-color-light;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.header-area {
+    @include transitionEase;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 150px;
+        animation-name: darker;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    h3 {
+        font-size: 45px;
+        margin-bottom: 30px;
+        color: darken($secondary-color, 17%);
+    }
+
+    a {
+        @include transitionEase;
+        background-color: $primary-color;
+        padding: 15px;
+        width: 10rem;
+        border-radius: 2px;
+        cursor: pointer;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+@keyframes darker {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #e9ecef;
+        font-size: 155px;
+    }
+
+    100% {
+        color: white;
+    }
+}
+

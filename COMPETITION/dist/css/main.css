@@ -1,0 +1,424 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.dark-blue {
+  color: #0077b6;
+}
+
+.grey {
+  color: #adb5bd;
+}
+
+.orange {
+  color: #ff5400;
+}
+
+.sidebar {
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  text-align: left;
+  top: 0px;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #0C548A;
+  display: block;
+  z-index: 2;
+}
+.sidebar .links a {
+  display: block;
+  padding: 17px 12px;
+  font-size: 22px;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.sidebar .links a:hover {
+  transition: all 0.2s ease-in-out;
+  background: #0077b6;
+  font-size: 23px;
+}
+.sidebar .active {
+  left: 0px;
+}
+
+.sidebar .menu-btn {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.sidebar .menu-btn span {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background: #ff5400;
+  transform: translateY(-50%);
+}
+
+.sidebar.active .menu-btn span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar.active .menu-btn span:nth-child(2) {
+  display: none;
+}
+
+.sidebar.active .menu-btn span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.sidebar.active {
+  left: 0px;
+}
+
+.short {
+  width: 24px;
+  top: 9px;
+}
+
+.shorter {
+  width: 20px;
+  top: 18px;
+}
+
+#games-area {
+  width: 85%;
+  margin: 4rem auto;
+}
+#games-area .game {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 10px;
+  margin-right: 2rem;
+  padding: 30px;
+  margin-bottom: 1rem;
+}
+#games-area hr {
+  color: #adb5bd;
+}
+#games-area h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #0077b6;
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
+#games-area img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+#games-area .link {
+  width: 100%;
+}
+#games-area .link a {
+  transition: all 0.2s ease-in-out;
+  display: block;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: #ff5400;
+  padding: 10px;
+  border: 1px solid white;
+  height: 50px;
+  max-width: 100%;
+  color: white;
+  text-decoration: none;
+}
+#games-area .link a:hover {
+  background-color: #fe6847;
+}
+
+.form {
+  width: 85%;
+  margin: 4rem auto;
+  text-align: center;
+}
+.form input {
+  margin-left: 10px;
+  margin-bottom: 2rem;
+}
+.form #name, .form #email {
+  margin-top: 1rem;
+  width: 20%;
+}
+.form #textarea {
+  display: block;
+}
+.form #textarea input {
+  display: block;
+}
+.form #textarea label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.form button {
+  background-color: #ff5400;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 35%;
+  height: 3vw;
+  margin-top: 2rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #0077b6;
+}
+footer .footer-one {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+footer .footer-one h3 {
+  color: white;
+  font-size: 40px;
+}
+footer .footer-one p {
+  color: #ffc971;
+}
+footer .footer-links {
+  margin-top: 10px;
+}
+footer .footer-links ul li a {
+  transition: all 0.2s ease-in-out;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+footer .footer-links ul li a:hover {
+  color: #ff5400;
+}
+
+header {
+  background: url("https://acegif.com/wp-content/gifs/water-20.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.header-area {
+  transition: all 0.2s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-area h1 {
+  font-size: 150px;
+  -webkit-animation-name: darker;
+          animation-name: darker;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.header-area h3 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  color: #003e5f;
+}
+.header-area a {
+  transition: all 0.2s ease-in-out;
+  background-color: #ff5400;
+  padding: 15px;
+  width: 10rem;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-decoration: none;
+  color: white;
+}
+.header-area a:hover {
+  color: #0077b6;
+}
+
+@-webkit-keyframes darker {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #e9ecef;
+    font-size: 155px;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes darker {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #e9ecef;
+    font-size: 155px;
+  }
+  100% {
+    color: white;
+  }
+}
+.cont {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 30px;
+}
+.cont h4 {
+  margin-top: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.cont h2 {
+  margin-top: 5px;
+}
+.cont h2 span {
+  font-size: 15px;
+}
+
+.info {
+  margin-top: 4rem;
+}
+
+.empty {
+  background: url("https://wallpaperaccess.com/full/1090557.jpg");
+  background-attachment: fixed;
+}
+
+.content-form {
+  padding: 15px;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+}
+.content-form h1 {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0077b6;
+  font-weight: 600;
+}
+.content-form p {
+  font-size: 20px;
+}
+
+.width-change {
+  margin-top: 6rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  header .header-area h1 {
+    font-size: 70px;
+    -webkit-animation-name: darker;
+            animation-name: darker;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  header .header-area h3 {
+    font-size: 30px;
+  }
+  header .header-area a {
+    width: 10rem;
+    padding: 10px;
+  }
+  @-webkit-keyframes darker {
+    0% {
+      color: white;
+    }
+    50% {
+      color: #e9ecef;
+      font-size: 75px;
+    }
+    100% {
+      color: white;
+    }
+  }
+  @keyframes darker {
+    0% {
+      color: white;
+    }
+    50% {
+      color: #e9ecef;
+      font-size: 75px;
+    }
+    100% {
+      color: white;
+    }
+  }
+  .grid-display {
+    position: relative;
+    left: 4%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 100%;
+  }
+  .grid-display .cont {
+    width: 100%;
+    max-height: 400px;
+  }
+  .empty {
+    display: none;
+  }
+  .game {
+    position: relative;
+    left: 4%;
+  }
+  .textarea, .name, .email {
+    display: block;
+    width: 100%;
+  }
+  .contact-us-form {
+    width: 100%;
+  }
+  .contact-us-form input {
+    padding: 0;
+    margin: 1rem 0;
+    position: relative;
+    left: 40%;
+  }
+  .contact-us-form button {
+    height: 40px;
+    text-align: center;
+    width: 80%;
+  }
+}/*# sourceMappingURL=main.css.map */

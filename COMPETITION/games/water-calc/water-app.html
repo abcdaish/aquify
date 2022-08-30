@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Intake Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../../dist/index.html">← Go Back</a>
+    </header>
+    <section class="header">
+        <h1>WATER INTAKE CALCULATOR</h1>
+        <marquee behavior="scroll" direction="right" scrollamount="10"><p>Calculate the total amount of water you need to drink in a day based on your lifestyle and BMI!</p></marquee>
+    </section>
+    <section class="quiz hidden" id="quiz">
+        <form onsubmit="return returnFalse();">
+        <label for="weight">Enter your weight(in kilograms):</label>
+        <input type="number" id="weight" placeholder="Enter your weight in kgs here.." required>
+        <label for="height">Enter your height(in centimetres):</label>
+        <input type="number" id="height" placeholder="Enter your weight in centimetres here.." required>
+        <label for="age">Enter your age:</label>
+        <input type="number" min="0" max="120" id="age" placeholder="Enter your age here.." required>
+        <label for="activity">For how many minutes do you workout?</label>
+        <input type="number" id="activity" placeholder="Enter the total amount of time your workout lasts in minutes here.." required>
+        <div class="buttons">
+            <button id="submit" type="submit">Submit</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+    </form>
+    </section>
+</body>
+</html>

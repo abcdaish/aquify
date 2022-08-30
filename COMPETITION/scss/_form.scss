@@ -1,0 +1,40 @@
+.form {
+    width: 85%;
+    margin: 4rem auto;
+    text-align: center;
+
+    input {
+        margin-left: 10px;
+        margin-bottom: 2rem;
+    }
+
+    #name, #email {
+        margin-top: 1rem;
+        width: 20%;
+    }
+
+    #textarea {
+        display: block;
+
+        input {
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 35%;
+        height: 3vw;
+        margin-top: 2rem;
+    }
+}

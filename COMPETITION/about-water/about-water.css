@@ -1,0 +1,291 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark-blue {
+    color: #0077b6;
+}
+
+.grey {
+    color: #adb5bd;
+}
+
+
+.orange {
+    color: #ff5400;
+}
+
+
+.sidebar {
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    text-align: left;
+    top: 0px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background:#0C548A;
+    display: block;
+}
+.links a {
+    display: block;
+    padding: 17px 12px;
+    font-size: 22px;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.links a:hover {
+    transition: all 0.2s ease-in-out;
+    background: #0077b6;
+    font-size: 23px;
+}
+
+    .active {
+        left: 0px;
+    }
+
+
+
+.sidebar .menu-btn {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sidebar .menu-btn span {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: #ff5400;
+    transform: translateY(-50%);
+}
+
+.sidebar.active .menu-btn span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar.active .menu-btn span:nth-child(2) {
+    display: none;
+}
+
+.sidebar.active .menu-btn span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.sidebar.active {
+    left: 0px;
+}
+
+.short {
+    width: 24px;
+    top: 9px;
+}
+
+.shorter {
+    width: 20px;
+    top: 18px;
+}
+
+li {
+    list-style-type: decimal;
+}
+
+header {
+    background: url('https://media3.giphy.com/media/3o7bu5O1zeaXvhi4ve/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 90px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+            0px -5px 35px rgba(255,255,255,0.3);
+    animation-name: textAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        font-size: 75px;
+        color: white;
+    }
+    50% {
+        font-size: 80px;
+        color: #ff5400;
+    }
+    100% {
+        font-size: 75px;
+        color: white;
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .about-water {
+    padding: 20px;
+    width: 60%;
+}
+
+main .about-water p {
+    font-size: 22px;
+}
+
+    .divider {
+        margin: 2rem auto;
+        font-size: 25px;
+        font-family: cursive;
+        text-align: center;
+        background: -webkit-linear-gradient(#73bfdc, #00008B);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        color: #ff5400;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+
+    ol {
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    .credits {
+        text-align: center;
+        font-size: 13px;
+}
+
+.credits a {
+    color: black;
+    display: block;
+    color: blue;
+    margin-bottom: 0.2rem;
+}
+
+footer ul {
+    margin-left: 1rem;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #0077b6;
+    }
+
+.footer .footer-one {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.footer-one h3 {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.footer-one p {
+    color: #ffc971;
+    padding: 10px;
+}
+
+
+
+    .footer-links {
+    margin-top: 10px;
+    }
+
+ul li a {
+    transition: all 0.2s ease-in-out;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+ul li a:hover {
+    color: #ff5400;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-area {
+        height: 30vh;
+    }
+
+    .header-area h1 {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+             0px -5px 35px rgba(255,255,255,0.3);
+        animation-name: textAnimation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes textAnimation {
+        0% {
+            font-size: 35px;
+            color: white;
+        }
+        50% {
+            font-size: 40px;
+            color: #ff5400;
+        }
+        100% {
+            font-size: 35px;
+            color: white;
+        }
+    }
+
+    main .about-water {
+        width: 100%;
+    }
+  }

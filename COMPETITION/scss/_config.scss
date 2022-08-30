@@ -1,0 +1,46 @@
+$primary-color: #ff5400;
+$secondary-color: #0077b6;
+$accent-color: #fe6847;
+$text-color-light: #fff;
+$text-color-dark: #000;
+$hover-color: #73bfdc;
+$invisible-grey: #f2f2f2;
+$normal-grey: #adb5bd;
+
+@mixin transitionEase {
+    transition: all 0.2s ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color-light;
+}
+
+.dark-blue {
+    color: $secondary-color;
+}
+
+.grey {
+    color: $normal-grey;
+}
+
+
+.orange {
+    color: $primary-color;
+}
+
+

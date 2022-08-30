@@ -1,0 +1,81 @@
+.sidebar {
+    @include transitionEase;
+    position: fixed;
+    text-align: left;
+    top: 0px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background:#0C548A;
+    display: block;
+    z-index: 2;
+
+    .links {
+        a {
+            display: block;
+            padding: 17px 12px;
+            font-size: 22px;
+            border-bottom: 1px solid $text-color-light;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+
+            &:hover {
+                @include transitionEase;
+                background: $secondary-color;
+                font-size: 23px;
+            }
+        }
+    }
+
+    .active {
+        left: 0px;
+    }
+}
+
+
+.sidebar .menu-btn {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sidebar .menu-btn span {
+    @include transitionEase;
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: $primary-color;
+    transform: translateY(-50%);
+}
+
+.sidebar.active .menu-btn span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar.active .menu-btn span:nth-child(2) {
+    display: none;
+}
+
+.sidebar.active .menu-btn span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.sidebar.active {
+    left: 0px;
+}
+
+.short {
+    width: 24px;
+    top: 9px;
+}
+
+.shorter {
+    width: 20px;
+    top: 18px;
+}
