@@ -31,6 +31,7 @@
 
     .link {
         width: 100%;
+        max-height: 60px;
 
         a {
             @include transitionEase;
@@ -48,5 +49,12 @@
                 background-color: $accent-color;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #games-area {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
